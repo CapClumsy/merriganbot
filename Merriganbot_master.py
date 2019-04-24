@@ -14,10 +14,10 @@ async def on_message(message):
         return
     
     lowercase_suicidal_words = ['suicide', 'kill me', 'want to die', 'kill myself']
-    lowercase_homocidal_words = ['die']
+    lowercase_homocidal_words = ['die', 'murder', 'assassinate']
     
     if any([w in message.content.lower() for w in lowercase_suicidal_words]):
-        msg = "Remember, you matter and that suicide is not a joke. People will miss you if you are gone."
+        msg = "Remember, you are important and suicide is not a joke. People will miss you if you are gone."
         await client.send_message(message.channel, msg)
 
     if any([w in message.content.lower() for w in lowercase_homocidal_words]):
