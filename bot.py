@@ -14,7 +14,7 @@ async def on_message(message):
         return
     
     lowercase_suicidal_words = ['suicide', 'kill me', 'want to die', 'kill myself', 'toaster bath', 'toaster in bath', 'toaster in the bath']
-    lowercase_homocidal_words = ['die']
+    lowercase_homocidal_words = ['die', 'kill you']
     lowercase_slurs = ['nigga', 'nigger', 'fag', 'retard']
     
     if any([w in message.content.lower() for w in lowercase_suicidal_words]):
