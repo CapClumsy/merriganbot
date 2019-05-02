@@ -1,7 +1,7 @@
 # https://github.com/Rapptz/discord.py/blob/async/examples/reply.py
 import discord
 
-with open('/home/pi/Desktop/MerriganBot/TOKEN.txt', 'r') as tokenfile:
+with open('TOKEN.txt', 'r') as tokenfile:
     TOKEN = tokenfile.readline()
     tokenfile.close()
 
