@@ -13,14 +13,9 @@ async def on_message(message):
     if message.author == client.user:
         return
     
-<<<<<<< HEAD
     lowercase_suicidal_words = ['suicide', 'kill me', 'want to die', 'kill myself', 'toaster bath', 'toaster in bath', 'toaster in the bath']
     lowercase_homocidal_words = ['die']
     lowercase_slurs = ['nigga', 'nigger', 'fag', 'retard']
-=======
-    lowercase_suicidal_words = ['suicide', 'kill me', 'want to die', 'kill myself']
-    lowercase_homocidal_words = ['die', 'murder', 'assassinate']
->>>>>>> fc7d4151465499ceb0a1454b926ed044df8543b6
     
     if any([w in message.content.lower() for w in lowercase_suicidal_words]):
         msg = "Remember, you are important and suicide is not a joke. People will miss you if you are gone."
