@@ -3,7 +3,6 @@ import discord
 
 with open('TOKEN.txt', 'r') as tokenfile:
     TOKEN = tokenfile.readline()
-    tokenfile.close()
 
 client = discord.Client()
 
