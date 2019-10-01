@@ -12,8 +12,8 @@ async def on_message(message):
     if message.author == client.user:
         return
     
-    lowercase_suicidal_words = ['suicide', 'kill me', 'want to die', 'kill myself', 'toaster bath', 'toaster in bath', 'toaster in the bath']
-    lowercase_homocidal_words = ['die', 'kill you']
+    lowercase_suicidal_words = ['suicide', 'kill me', 'want to die', 'kill myself', 'toaster bath', 'toaster in bath', 'toaster in the bath', 'hate my life', 'wanna die']
+    lowercase_homocidal_words = ['die', 'kill you', 'murder', 'shoot you']
     lowercase_slurs = ['nigga', 'nigger', 'fag', 'retard']
     
     if any([w in message.content.lower() for w in lowercase_suicidal_words]):
@@ -25,10 +25,10 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
 
     if any([w in message.content.lower() for w in lowercase_slurs]):
-        msg = "That is not appropriate speech for this server. Let's change out mindset"
+        msg = "That is not appropriate speech for this server. Let's change our mindset"
         await client.send_message(message.channel, msg)
 
-    if message.content.upper ().startswith('E!CHANGESTATUS'):
+    if message.content.lower().startswith('e!changestatus'):
         if message.author.id == "369267862050832385":
             args = message.content.split(" ")
             if len (args) == 1:
